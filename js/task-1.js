@@ -3,10 +3,10 @@ function isEnoughCapacity(products, containerSize) {
     for (const key in products) {
         sumNumder += products[key];
     }
-    if (sumNumder > containerSize) {
-        return false;
-    } else {
+    if (sumNumder < containerSize) {
         return true;
+    } else {
+        return false;
     }
 }
 console.log(
